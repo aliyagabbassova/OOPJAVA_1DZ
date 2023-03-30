@@ -1,13 +1,20 @@
 package org.example.units;
 
-import org.example.Spells;
-
-import java.util.ArrayList;
+import org.example.BaseHero;
 
 public class Spearman extends BaseHero {
-
-    public Spearman(String name) {
-        super(200, name, 1, 6, 100, new int[]{10, 20}, "Копейщик");
+    int accuracy; //точность удара
+    int quoinSpears, maxQuoinSpears; // количество копьев, макс. кол-во копьев
+    float backSpears; // скорость восстановления запаса копьев
+    public Spearman(String name, int x, int y, int atk, int [] dmg, float hP) {
+        super(name, x, y, atk, dmg, hP);
+        accuracy = 30;
+        quoinSpears = maxQuoinSpears = 10;
+        backSpears = 1.01F;
     }
 
+    @Override
+    public String getInfo() {
+        return "Я копейщик";
+    }
 }

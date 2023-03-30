@@ -1,16 +1,22 @@
 package org.example.units;
 
-import org.example.weapons.Weapons;
+import org.example.BaseHero;
 
-public class Sniper extends BaseHero {
+public class Sniper extends Shooter {
 
-    int arrows;
+    int quonBullets, maxQuonBullets, accuracy; // количество пуль, макс.кол-во пуль, точность
 
-    int accuracy;
+    float backBullets; // Скорость восстановления запаса пуль
 
-    public Sniper(String name) {
-        super(100, name, 1, 6, 50, new int[] {6,12}, "Снайпер");
-        arrows = 10;
-        accuracy = 70;
+    public Sniper(String name, int x, int y, int def, int [] dmg, float hP) {
+        super (name, x, y, def, dmg, hP);
+        quonBullets = maxQuonBullets = 100;
+        accuracy = 95;
+        backBullets = 1.01F;
+    }
+
+    @Override
+    public String getInfo() {
+        return "Я снайпер";
     }
 }

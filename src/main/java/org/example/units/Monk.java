@@ -1,16 +1,19 @@
 package org.example.units;
 
-import org.example.Spells;
-
-import java.util.ArrayList;
-
+import org.example.BaseHero;
 public class Monk extends BaseHero {
-    protected int mana;
+    int quoinMana, aura;  //количество магии, аура
+    float backMana;     // скорость восстановления маны
 
-    protected ArrayList<Spells> spells_book;
+    public Monk(String name, int x, int y, int atk, int [] dmg, float hP) {
+        super(name, x, y, atk, dmg, hP);
+        quoinMana = 100;
+        backMana = 1.01F;
+        aura = 100;
+    }
 
-    public Monk(String name) {
-        super(150, name, 1, 6, 30, new int[]{5, 8}, "Монах");
-        mana = 80;
+    @Override
+    public String getInfo() {
+        return "Я монах";
     }
 }

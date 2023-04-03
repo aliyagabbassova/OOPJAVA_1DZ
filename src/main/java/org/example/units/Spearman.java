@@ -1,20 +1,19 @@
 package org.example.units;
 
-import org.example.BaseHero;
-
-public class Spearman extends BaseHero {
-    int accuracy; //точность удара
-    int quoinSpears, maxQuoinSpears; // количество копьев, макс. кол-во копьев
-    float backSpears; // скорость восстановления запаса копьев
-    public Spearman(String name, int x, int y, int atk, int [] dmg, float hP) {
+public class Spearman extends Shooter {         // Копьеносец
+    int accuracy; // точность удара
+    int quonSpears, maxQuonSpears; // количество копий, максимальное количество копий
+    float backSpears; // скорость восстановления запаса копий
+    public Spearman(String name, int x, int y, int atk, int[] dmg, float hP) {
         super(name, x, y, atk, dmg, hP);
         accuracy = 30;
-        quoinSpears = maxQuoinSpears = 10;
+        quonSpears = maxQuonSpears = 10;
         backSpears = 1.01F;
     }
-
     @Override
     public String getInfo() {
-        return "Я копейщик";
+
+        return "Я Копьеносец!";
     }
+
 }

@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="519d6920-3eb8-4df0-a78e-447a157efd0c" name="Changes" comment="task1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Names.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" afterDir="false" />
+    <list default="true" id="519d6920-3eb8-4df0-a78e-447a157efd0c" name="Changes" comment="task2">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/GameInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseHero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Spells.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" afterDir="false" />
@@ -29,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,13 +58,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/a.gabbasova.ALMATYSU/Учеба/JAVA/OOPJAVA_1DZ"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,11 +82,19 @@
       <option name="project" value="LOCAL" />
       <updated>1679912393933</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="task2">
+      <created>1680143892430</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680143892430</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task1" />
-    <option name="LAST_COMMIT_MESSAGE" value="task1" />
+    <MESSAGE value="task2" />
+    <option name="LAST_COMMIT_MESSAGE" value="task2" />
   </component>
 </project>

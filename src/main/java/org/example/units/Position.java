@@ -1,7 +1,9 @@
 package org.example.units;
 
 public class Position {
-    protected int x, y;
+    public float distance;
+    protected int x;
+    protected int y;
 
     public Position (int x, int y) {
         this.x = x;

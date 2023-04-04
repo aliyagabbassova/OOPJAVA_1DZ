@@ -20,6 +20,10 @@ public abstract class BaseHero implements GameInterface {
         this.def = def;
     }
 
+    public BaseHero(int x, int y) {
+        super();
+    }
+
 
     public String getName() {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();

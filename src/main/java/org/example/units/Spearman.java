@@ -2,12 +2,12 @@ package org.example.units;
 
 public class Spearman extends Shooter {         // Копьеносец
     int accuracy; // точность удара
-    int quonSpears, maxQuonSpears; // количество копий, максимальное количество копий
+    int quoinSpears, maxQuoinSpears; // количество копий, максимальное количество копий
     float backSpears; // скорость восстановления запаса копий
     public Spearman(String name, int x, int y, int atk, int[] dmg, float hP) {
         super(name, x, y, atk, dmg, hP);
         accuracy = 30;
-        quonSpears = maxQuonSpears = 10;
+        quoinSpears = maxQuoinSpears = 10;
         backSpears = 1.01F;
     }
     @Override

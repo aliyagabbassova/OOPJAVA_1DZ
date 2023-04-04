@@ -3,7 +3,7 @@ package org.example.units;
 import java.util.ArrayList;
 
 public class Crossbowman extends Shooter {              //Арбалетчик
-    int quoinBolt, maxQuoinBolts, accuracy;
+    int quoinBolt, maxQuoinBolts, accuracy;             // Стрела арбалета, макс.количество стрел арбалета, точность
 
 
     public Crossbowman (String name, int x, int y, int atk, int[] dmg, float hP) {
@@ -27,11 +27,11 @@ public class Crossbowman extends Shooter {              //Арбалетчик
 
     }
 
-    public Boolean ifArrows() {
+    protected Boolean ifArrows() {
         return quoinBolt == 0;
     }
 
-    private Boolean isAlive() {
+    protected Boolean isAlive() {
         return hP == 0;
     }
 }

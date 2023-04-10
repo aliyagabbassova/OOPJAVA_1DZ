@@ -7,8 +7,8 @@ public class Thief extends BaseHero {       // Вор
     int timeStealth, timeResistance; // время скрытности, время сопротивления магии
 
 
-    public Thief(String name, int x, int y, int atk, int[] dmg, float hP) {
-        super(name, x, y, atk, dmg, hP);
+    public Thief(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
+        super(name, x, y, attack, initiative, def, dmg, hP, damageMax, damageMin);
         timeStealth = timeResistance = 60;
         stealth =  magicResistance = false;
     }
@@ -18,13 +18,6 @@ public class Thief extends BaseHero {       // Вор
     }
 
     @Override
-    public void step(ArrayList<BaseHero> anyHeroes) {
-
-    }
-
-    @Override
-    public void step(){
-
-
+    public void step(ArrayList<BaseHero> enemies, ArrayList <BaseHero> friends) {
     }
 }

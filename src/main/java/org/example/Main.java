@@ -2,191 +2,108 @@ package org.example;
 import org.example.units.*;
 import java.util.ArrayList;
 import java.util.Random;
-
+import java.util.Comparator;
+import java.util.Scanner;
 public class Main {
+    public static ArrayList<BaseHero> heroes = new ArrayList<>();
     public static ArrayList<BaseHero> heroes2 = new ArrayList<>();
-
+    public static BaseHero[] unitedTeams;
+    private static Scanner myScanner = new Scanner(System.in);
+    public Position position;
 
     public static void main(String[] args) {
+        unitedTeams();
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            unitedTeams = sortTeam().toArray(new BaseHero[0]);
+            View.view();  // отображение в консоль
+            input.nextLine();
+            for (BaseHero human : unitedTeams) {
+                if (heroes.contains(human)) human.step(heroes, heroes2);
+                else human.step(heroes, heroes2);
+            }
+        }
+    }
 
-        ArrayList<BaseHero> heroes = new ArrayList<>();
+    private static ArrayList<BaseHero> sortTeam() {
+        ArrayList<BaseHero> list = new ArrayList<>();
+        list.addAll(heroes);
+        list.addAll(heroes2);
+        list.sort(new Comparator<BaseHero>() {
+            @Override
+            public int compare(BaseHero t0, BaseHero t1) {
+                if (t1.getInit() == t0.getInit()) return (int) (t1.getHp() - t0.getHp());
+                else return (int) (t1.getInit() - t0.getInit());
+            }
+        });
+        return list;
+    }
 
-
+    private static ArrayList<BaseHero> unitedTeams() {
+        //ArrayList<BaseHero> heroes = new ArrayList<>();
+        ArrayList<BaseHero> unitedTeams = new ArrayList<BaseHero>();
         for (int i = 0; i < 10; i++) {
             switch (new Random().nextInt(4)) {
                 case 0:
-                    heroes.add(new Crossbowman("Святополк", 0, i, 70, new int[]{12, 20}, 100));
+                    heroes.add(new Crossbowman("Святополк", 0, i, 20, 7, 10, new float[]{12, 20}, 100, 20, 12));
                     break;
                 case 1:
-                    heroes.add(new Mage("Коловрат", 0, i, 2, new int[]{12, 20}, 100));
+                    heroes.add(new Mage("Коловрат", 0, i, 0, 5, 2, new float[]{5, 6}, 100, 6, 5));
                     break;
 
                 case 2:
-                    heroes.add(new Peasant("Пересвет", 0, i, 4, new int[]{3, 7}, 100));
+                    heroes.add(new Peasant("Пересвет", 0, i, 0, 3, 2, new float[]{3, 7}, 100, 7, 3));
                     break;
 
                 case 3:
-                    heroes.add(new Thief("Хитроум", 0, i, 6, new int[]{5, 10}, 100));
+                    heroes.add(new Thief("Хитроум", 0, i, 0, 6, 6, new float[]{5, 10}, 100, 10, 5));
                     break;
-
             }
         }
-            for (int j = 0; j < 10; j++) {
-                switch (new Random().nextInt(4)) {
-
-                    case 0:
-                        heroes.add(new Monk("Мирослав", 8, j, 3, new int[]{8, 16}, 100));
-                        break;
-                    case 1:
-                        heroes.add(new Peasant("Пересвет", 8, j, 4, new int[]{3, 7}, 100));
-                        break;
-                    case 2:
-                        heroes.add(new Sniper("Зоркомёт", 8, j, 5, new int[]{10, 18}, 100));
-                        break;
-                    case 3:
-                        heroes.add(new Spearman("<Бронеслав", 8, j, 6, new int[]{12, 20}, 100));
-                        break;
-
-                }
-
+        for (int j = 0; j < 10; j++) {
+            switch (new Random().nextInt(4)) {
+                case 0:
+                    heroes2.add(new Monk("Мирослав", 8, j, 0, 5, 3, new float[]{8, 10}, 100, 10, 5));
+                    break;
+                case 1:
+                    heroes2.add(new Peasant("Пересвет", 8, j, 0, 3, 4, new float[]{3, 7}, 100, 15, 5 ));
+                    break;
+                case 2:
+                    heroes2.add(new Sniper("Зоркомёт", 8, j, 20, 8, 10, new float[]{10, 18}, 100, 18,10));
+                    break;
+                default:
+                    heroes2.add(new Spearman("<Бронеслав", 8, j, 20, 7, 10, new float[]{12, 20}, 100, 20, 12));
             }
-
-            heroes.forEach((n) -> System.out.println(n.getName() + " " + n.getInfo()));
         }
-
+        return unitedTeams;
     }
-
-//Арбалетчик, Маг, Монах, Крестьянин, Вор, Снайпер, ,Алебардщик
-
-//Арбалетчик:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Текущее здоровье
-//            Максимальный запас болтов
-//            Текущий запас болтов
-//            Броня
-//            Урон на дальнем расстоянии
-//            Урон в ближнем бою
-//            Точность выстрела
-//        Действия:
-//            Нанести урон
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//            Получить болты
-//Маг:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Текущее здоровье
-//            Максимальный запас маны
-//            Текущий запас маны
-//            Скорость восстановления маны
-//            Броня
-//            Урон
-//        Действия:
-//            Заклинание1
-//            Заклинание2
-//            Заклинание3
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//
-//Монах:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Текущее здоровье
-//            Сила ауры
-//            Максимальная мана
-//            Текущая мана
-//            Скорость восстановления маны
-//            Броня
-//            Урон
-//        Действия:
-//            Нанести урон
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//            Оказать лечение
-//Крестьянин:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Текущее здоровье
-//            Максимальный запас стрел
-//            Текущий запас стрел
-//            Максимальный запас болтов
-//            Текущий запас болтов
-//            Скорость восстановления запаса
-//            Броня
-//
-//        Действия:
-//            Бег
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//            Поделиться болтами
-//            Поделиться стрелами
-//Вор:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Урон
-//            Текущее здоровье
-//            Скрытность
-//            Броня
-//            Сопротивление магии
-//
-//        Действия:
-//            Бег
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//            Нанести урон
-//            Удар
-//Снайпер:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Текущее здоровье
-//            Урон
-//            Максимальный запас пуль
-//            Текущий запас пуль
-//            Скорость восстановления боеприпаса
-//            Урон на дальнем расстоянии
-//            Урон в ближнем бою
-//            Точность выстрела
-//            Броня
-//        Действия:
-//
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//            Нанести урон
-//            Получить стрелы
-//Копьеносец:
-//        Свойства:
-//            Имя
-//            Координаты
-//            Максимальное здоровье
-//            Текущее здоровье
-//            Урон
-//            Точность укола
-//            Броня
-//        Действия:
-//
-//            Ходьба
-//            Получить урон
-//            Получить лечение
-//            Нанести урон
+}
 
 
+//        private static void compare (ArrayList < BaseHero > heroes);
+//                    {
+//                heroes.sort(new Comparator<BaseHero>() {
+//                    @Override
+//                    public int compare(BaseHero o1, BaseHero o2) {
+//                        if (o1.getInit() - o2.getInit() == 0) {
+//                            return (int) (o1.getHp() - o2.getHp());
+//                        }
+//
+//                        return o2.getInit() - o1.getInit();
+//                    }
+//                });
+//        private static ArrayList<BaseHero> sortTeam () {
+//            ArrayList<BaseHero> list = new ArrayList<>();
+//            list.addAll(heroes);
+//            list.addAll(heroes2);
+//            list.sort(new Comparator<BaseHero>() {
+//                @Override
+//                public int compare(BaseHero t0, BaseHero t1) {
+//                    if (t1.getInit() == t0.getInit()) return (int) (t1.getHp() - t0.getHp());
+//                    else return (int) (t1.getInit() - t0.getInit());
+//                }
+//            });
+//            return list;
+//        }
+//    }
 

@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="519d6920-3eb8-4df0-a78e-447a157efd0c" name="Changes" comment="task3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/units/NearestEnemy.java" afterDir="false" />
+    <list default="true" id="519d6920-3eb8-4df0-a78e-447a157efd0c" name="Changes" comment="task3 - 04.04.2023">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AnsiColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/NearestEnemy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weapons/Weapons.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,13 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680518895703</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="task3 - 04.04.2023">
+      <created>1680582626384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680582626384</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task1" />
     <MESSAGE value="task2" />
     <MESSAGE value="task3" />
-    <option name="LAST_COMMIT_MESSAGE" value="task3" />
+    <MESSAGE value="task3 - 04.04.2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="task3 - 04.04.2023" />
   </component>
 </project>

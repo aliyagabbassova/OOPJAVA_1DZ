@@ -7,8 +7,9 @@ public class Peasant extends BaseHero {     // Крестьянин
     // максимальное количество болтов
     float backAmmo; // скорость восстановления боеприпаса
 
-    public Peasant(String name, int x, int y, int atk, int[] dmg, float hP) {
-        super(name, x, y, atk, dmg, hP);
+
+    public Peasant(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
+        super(name, x, y, attack, initiative, def, dmg, hP, damageMax, damageMin);
         quoinArrows = maxQuoinArrows = quoinBolts = maxQuoinBolts = 10;
         backAmmo = 1.01F;
     }
@@ -16,14 +17,8 @@ public class Peasant extends BaseHero {     // Крестьянин
     public String getInfo() {
         return "Я крестьянин!";
     }
-
     @Override
-    public void step(ArrayList<BaseHero> anyHeroes) {
-
-    }
-
-    @Override
-    public void step() {
+    public void step(ArrayList<BaseHero> enemys, ArrayList <BaseHero> friends) {
 
     }
 }

@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="519d6920-3eb8-4df0-a78e-447a157efd0c" name="Changes" comment="task3 - 04.04.2023">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AnsiColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/View.java" afterDir="false" />
+    <list default="true" id="519d6920-3eb8-4df0-a78e-447a157efd0c" name="Changes" comment="task5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/BaseHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Crossbowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/GameInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Monk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/NearestEnemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Peasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Names.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Names.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Sniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Spearman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Thief.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weapons/Weapons.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +55,26 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/a.gabbasova.ALMATYSU/Учеба/JAVA/OOPJAVA_1DZ&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="OOPJAVA_1DZ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680582626384</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="task4">
+      <created>1681122726645</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681122726645</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -111,6 +127,8 @@
     <MESSAGE value="task2" />
     <MESSAGE value="task3" />
     <MESSAGE value="task3 - 04.04.2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="task3 - 04.04.2023" />
+    <MESSAGE value="task4" />
+    <MESSAGE value="task5" />
+    <option name="LAST_COMMIT_MESSAGE" value="task5" />
   </component>
 </project>

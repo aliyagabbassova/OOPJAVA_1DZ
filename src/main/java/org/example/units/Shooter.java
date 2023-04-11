@@ -59,14 +59,5 @@ public abstract class Shooter extends BaseHero {        // Стрелок
         return false;
     }
 
-    @Override
-    public String toString() {
-        return name +
-                " H:" + Math.round(hP) +
-                " D:" + def +
-                " A:" + attack +
-                " Dmg:" + Math.round(Math.abs((damageMin + damageMax) / 2)) +
-                " Shots:" + ammoReserve + " " +
-                state;
-    }
+
 }

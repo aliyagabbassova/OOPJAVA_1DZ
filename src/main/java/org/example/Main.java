@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static ArrayList<BaseHero> heroes = new ArrayList<>();
     public static ArrayList<BaseHero> heroes2 = new ArrayList<>();
-    public static BaseHero[] unitedTeams;
+    public static ArrayList<BaseHero> unitedTeams = new ArrayList<>();
     private static Scanner myScanner = new Scanner(System.in);
     public Position position;
 
@@ -15,7 +15,7 @@ public class Main {
         unitedTeams();
         Scanner input = new Scanner(System.in);
         while (true) {
-            unitedTeams = sortTeam().toArray(new BaseHero[0]);
+            unitedTeams = sortTeam();
             View.view();  // отображение в консоль
             input.nextLine();
             for (BaseHero human : unitedTeams) {
@@ -41,7 +41,7 @@ public class Main {
 
     private static ArrayList<BaseHero> unitedTeams() {
         //ArrayList<BaseHero> heroes = new ArrayList<>();
-        ArrayList<BaseHero> unitedTeams = new ArrayList<BaseHero>();
+
         for (int i = 0; i < 10; i++) {
             switch (new Random().nextInt(4)) {
                 case 0:
@@ -66,7 +66,7 @@ public class Main {
                     heroes2.add(new Monk("Мирослав", 8, j, 0, 5, 3, new float[]{8, 10}, 100, 10, 5));
                     break;
                 case 1:
-                    heroes2.add(new Peasant("Пересвет", 8, j, 0, 3, 4, new float[]{3, 7}, 100, 15, 5 ));
+                    heroes2.add(new Peasant("Иритель", 8, j, 0, 3, 4, new float[]{3, 7}, 100, 15, 5 ));
                     break;
                 case 2:
                     heroes2.add(new Sniper("Зоркомёт", 8, j, 20, 8, 10, new float[]{10, 18}, 100, 18,10));
@@ -78,32 +78,4 @@ public class Main {
         return unitedTeams;
     }
 }
-
-
-//        private static void compare (ArrayList < BaseHero > heroes);
-//                    {
-//                heroes.sort(new Comparator<BaseHero>() {
-//                    @Override
-//                    public int compare(BaseHero o1, BaseHero o2) {
-//                        if (o1.getInit() - o2.getInit() == 0) {
-//                            return (int) (o1.getHp() - o2.getHp());
-//                        }
-//
-//                        return o2.getInit() - o1.getInit();
-//                    }
-//                });
-//        private static ArrayList<BaseHero> sortTeam () {
-//            ArrayList<BaseHero> list = new ArrayList<>();
-//            list.addAll(heroes);
-//            list.addAll(heroes2);
-//            list.sort(new Comparator<BaseHero>() {
-//                @Override
-//                public int compare(BaseHero t0, BaseHero t1) {
-//                    if (t1.getInit() == t0.getInit()) return (int) (t1.getHp() - t0.getHp());
-//                    else return (int) (t1.getInit() - t0.getInit());
-//                }
-//            });
-//            return list;
-//        }
-//    }
 

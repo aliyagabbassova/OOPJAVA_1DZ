@@ -15,6 +15,7 @@ public abstract class BaseHero implements GameInterface {
     protected String state;
     protected float hP, maxHp; // здоровье
     public String name; // имя
+    public int ammoReserve;
 
     public BaseHero(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
         this.name = getName();
@@ -64,10 +65,10 @@ public abstract class BaseHero implements GameInterface {
         return hP;
     }
 
-    @Override
-    public String toString() {
-        return String.valueOf(hP);
-    }
+//    @Override
+//    public String toString() {
+//        return String.valueOf(hP);
+//    }
 
 //    protected void getDamage(float damage) {
 //            System.out.println(this.getInfo() + " " + this.name + " gets " + Math.min(dmg, this.hP) + " str dmg");
@@ -82,5 +83,19 @@ public abstract class BaseHero implements GameInterface {
         }
         if (hP > maxHp) hP = maxHp;
     }
+    @Override
+    public String toString() {
+        return name +
+                " H:" + Math.round(hP) +
+                " D:" + def +
+                " A:" + attack +
+                " Dmg:" + Math.round(Math.abs((damageMin + damageMax) / 2)) +
+                " Shots:" + ammoReserve + " " +
+                state;
     }
+
+    public double[] position() {
+        return new double[]{0,1};
+    }
+}
 

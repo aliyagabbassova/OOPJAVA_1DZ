@@ -5,7 +5,7 @@ public interface GameInterface  {
 
     String  getInfo ();
 
-    void step(ArrayList <BaseHero> enemys, ArrayList <BaseHero> friends);
+    void step(ArrayList <BaseHero> enemies, ArrayList <BaseHero> friends);
 
 
 

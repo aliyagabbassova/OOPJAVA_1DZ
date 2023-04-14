@@ -11,7 +11,7 @@ public class Crossbowman extends Shooter {              //Арбалетчик
         }
         @Override
         public String getInfo() {
-            return "Я арбалетчик!";
+            return "Арбалетчик";
         }
 
 

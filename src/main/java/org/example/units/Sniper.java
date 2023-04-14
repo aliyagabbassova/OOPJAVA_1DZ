@@ -11,7 +11,7 @@ public class Sniper extends Shooter {           // Снайпер
     }
     @Override
     public String getInfo() {
-        return "Я снайпер";
-    }
+        return "Снайпер";
+            }
 
 }

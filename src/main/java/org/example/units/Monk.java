@@ -1,7 +1,7 @@
 package org.example.units;
 import java.util.ArrayList;
 
-public class Monk extends BaseHero {            // Монах
+    public class Monk extends BaseHero {            // Монах
     int quoinMana, aura; // количество магии, аура
     float backMana; // скорость восстановления маны
 
@@ -13,6 +13,11 @@ public class Monk extends BaseHero {            // Монах
     }
     @Override
     public String getInfo() {
-        return "Я монах!";
+        return "Монах";
     }
-}
+
+        @Override
+        public void step(ArrayList<BaseHero> enemies, ArrayList<BaseHero> friends) {
+
+        }
+    }

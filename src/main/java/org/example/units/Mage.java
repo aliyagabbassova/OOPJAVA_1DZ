@@ -1,5 +1,7 @@
 package org.example.units;
 
+import java.util.ArrayList;
+
 public class Mage extends BaseHero {
     int quoinMana; // количесто маны
     float backMana; // скорость восстановления маны
@@ -9,7 +11,24 @@ public class Mage extends BaseHero {
         backMana = 1.01F;
     }
     @Override
+    public void step(ArrayList<BaseHero> team1, ArrayList<BaseHero> team2) {
+        for (BaseHero human: team1) {
+            if (human.hP < human.maxHp & !human.state.equals("Die")) {
+                human.getDamage(damageMax);
+                return;
+            }
+        }
+    }
+
+//    protected void getTreat(float dmg){
+//            if (hP <= 0) {
+//            hP = 0;
+//            state = "Die";
+//        }
+//        if (hP < 30) this.hP += dmg;
+//    }
+    @Override
     public String getInfo() {
-        return "Я маг!";
+        return "Маг";
     }
 }

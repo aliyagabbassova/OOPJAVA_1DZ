@@ -2,7 +2,7 @@ package org.example.units;
 
 import java.util.ArrayList;
 
-public class Thief extends BaseHero {       // Вор
+public class Thief extends Infantry {       // Вор
     boolean stealth, magicResistance; // скрытность, сопротивляемость магии
     int timeStealth, timeResistance; // время скрытности, время сопротивления магии
 
@@ -14,7 +14,7 @@ public class Thief extends BaseHero {       // Вор
     }
     @Override
     public String getInfo() {
-        return "Я вор!";
+        return "Вор";
     }
 
     @Override

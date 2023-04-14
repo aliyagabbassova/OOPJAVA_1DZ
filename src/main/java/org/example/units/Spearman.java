@@ -1,6 +1,6 @@
 package org.example.units;
 
-public class Spearman extends Shooter {         // Копьеносец
+public class Spearman extends Infantry {         // Копьеносец
     int accuracy; // точность удара
     int quoinSpears, maxQuoinSpears; // количество копий, максимальное количество копий
     float backSpears; // скорость восстановления запаса копий
@@ -13,7 +13,7 @@ public class Spearman extends Shooter {         // Копьеносец
     @Override
     public String getInfo() {
 
-        return "Я Копьеносец!";
+        return "Копейщик!";
     }
 
 }

@@ -1,7 +1,7 @@
 package org.example.units;
 import java.util.Random;
 import java.util.ArrayList;
-import java.util.HashMap;
+
 public abstract class BaseHero implements GameInterface {
     protected static Random r;
     protected int strength, maxStrength;
@@ -19,7 +19,7 @@ public abstract class BaseHero implements GameInterface {
 
     public BaseHero(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
         this.name = getName();
-        this.position = position;
+        this.position = new Position(x,y);
         this.attack = attack;
         this.dmg = dmg;
         this.hP = hP;
@@ -35,24 +35,16 @@ public abstract class BaseHero implements GameInterface {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }
 
-    @Override
-    public void step(ArrayList<BaseHero> enemies, ArrayList<BaseHero> friends) {
-    }
+//    @Override
+//    public void step(ArrayList<BaseHero> enemies, ArrayList<BaseHero> friends) {
+//    }
 
     public Boolean ifAlive() {
         return hP > 0;
     }
 
-    public BaseHero nearest(ArrayList<BaseHero> otherHeroes) {
-        float min = 10;
-        BaseHero nearestHero = null;
-        for (int i = 0; i < otherHeroes.size(); i++) {
-            if (this.position.distance(otherHeroes.get(i)) < min) ;
-            nearestHero = otherHeroes.get(i);
-        }
-        return nearestHero;
-    }
-    public void die() {
+
+     public void die() {
         System.out.println(this.getInfo() + " " + this.name + " dies a horrible death...");
         this.state = "dead";
     }
@@ -65,15 +57,6 @@ public abstract class BaseHero implements GameInterface {
         return hP;
     }
 
-//    @Override
-//    public String toString() {
-//        return String.valueOf(hP);
-//    }
-
-//    protected void getDamage(float damage) {
-//            System.out.println(this.getInfo() + " " + this.name + " gets " + Math.min(dmg, this.hP) + " str dmg");
-//            this.hP -= Math.min(dmg, this.hP);
-//            if (hP == 0) this.die();
 
     protected void getDamage(float dmg){
         this.hP -= dmg;
@@ -85,17 +68,31 @@ public abstract class BaseHero implements GameInterface {
     }
     @Override
     public String toString() {
-        return name +
-                " H:" + Math.round(hP) +
+        return this.getInfo() +
+                " hP:" + Math.round(hP) +
                 " D:" + def +
                 " A:" + attack +
                 " Dmg:" + Math.round(Math.abs((damageMin + damageMax) / 2)) +
                 " Shots:" + ammoReserve + " " +
                 state;
     }
-
-    public double[] position() {
-        return new double[]{0,1};
+    public int nearest(ArrayList<BaseHero> enemyTeam) {
+        int index = 0;
+        double min = this.position.distance(enemyTeam.get(0));
+        for (int i = 1; i < enemyTeam.size(); ++i) {
+            if (this.position.distance(enemyTeam.get(i)) < min
+                    && (!enemyTeam.get(i).state.equals("Die"))) {
+                min = this.position.distance(enemyTeam.get(i));
+                index =i;
+            }
+        }
+        return index;
     }
+
+    public int[] position() {
+
+        return new int[]{position.x, position.y};
+    }
+
 }
 

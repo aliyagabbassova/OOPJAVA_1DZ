@@ -6,7 +6,7 @@ public class Peasant extends BaseHero {     // Крестьянин
     int quoinArrows, maxQuoinArrows, quoinBolts, maxQuoinBolts; // количество стрел, максимальное количество стрел, количество болтов
     // максимальное количество болтов
     float backAmmo; // скорость восстановления боеприпаса
-
+    String state;
 
     public Peasant(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
         super(name, x, y, attack, initiative, def, dmg, hP, damageMax, damageMin);
@@ -15,10 +15,10 @@ public class Peasant extends BaseHero {     // Крестьянин
     }
     @Override
     public String getInfo() {
-        return "Я крестьянин!";
+        return "Крестьянин";
     }
     @Override
-    public void step(ArrayList<BaseHero> enemys, ArrayList <BaseHero> friends) {
+    public void step(ArrayList<BaseHero> enemies, ArrayList <BaseHero> friends) {
 
     }
 }

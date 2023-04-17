@@ -18,14 +18,10 @@ public class Main {
             System.out.print("Press Enter to begin.");
             String action = console.nextLine();
 
-
             while (true) {
                 View.view();
                 console.nextLine();
                 Teams.stepTeam(Teams.unitedTeams);
-
-
-
             }
         }
     }

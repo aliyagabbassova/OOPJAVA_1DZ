@@ -1,7 +1,5 @@
 package org.example.units;
 import java.util.ArrayList;
-import java.util.Random;
-import org.example.Main;
 
 public abstract class Shooter extends BaseHero {        // Стрелок
     int accuracy;
@@ -9,7 +7,7 @@ public abstract class Shooter extends BaseHero {        // Стрелок
     int arrows;
     String state;
 
-    public Shooter(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
+    public Shooter(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax, int damageMin) {
         super(name, x, y, attack, initiative, def, dmg, hP, damageMax, damageMin);
         this.accuracy = accuracy;
         this.ammoReserve = ammoReserve;

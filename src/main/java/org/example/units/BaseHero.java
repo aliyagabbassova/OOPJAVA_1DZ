@@ -29,26 +29,19 @@ public abstract class BaseHero implements GameInterface {
         this.state = "stand";
         this.damageMax = damageMax;
         this.damageMin = damageMin;
-
     }
     public String getName() {
         return Names.values()[new Random().nextInt(Names.values().length)].toString();
     }
 
-//    @Override
-//    public void step(ArrayList<BaseHero> enemies, ArrayList<BaseHero> friends) {
-//    }
-
     public Boolean ifAlive() {
         return hP > 0;
     }
 
-
      public void die() {
-        System.out.println(this.getInfo() + " " + this.name + " dies a horrible death...");
+        System.out.println(this.getName() + " " + this.name + " dies a horrible death...");
         this.state = "dead";
     }
-
     public int getInit() {
         return initiative;
     }
@@ -56,7 +49,6 @@ public abstract class BaseHero implements GameInterface {
     public float getHp() {
         return hP;
     }
-
 
     protected void getDamage(float dmg){
         this.hP -= dmg;
@@ -68,7 +60,7 @@ public abstract class BaseHero implements GameInterface {
     }
     @Override
     public String toString() {
-        return this.getInfo() +
+        return this. getInfo() + " " + getName() +
                 " hP:" + Math.round(hP) +
                 " D:" + def +
                 " A:" + attack +

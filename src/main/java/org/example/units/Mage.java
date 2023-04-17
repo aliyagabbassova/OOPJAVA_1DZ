@@ -25,7 +25,7 @@ public class Mage extends BaseHero {
 //            hP = 0;
 //            state = "Die";
 //        }
-//        if (hP < 30) this.hP += dmg;
+//        if (hP < 30) this.hP += dmg/2;
 //    }
     @Override
     public String getInfo() {

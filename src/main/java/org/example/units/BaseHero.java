@@ -17,6 +17,7 @@ public abstract class BaseHero implements GameInterface {
     public String name; // имя
     public int ammoReserve;
 
+
     public BaseHero(String name, int x, int y, int attack, int initiative, int def, float[] dmg, float hP, int damageMax,int damageMin) {
         this.name = getName();
         this.position = new Position(x,y);

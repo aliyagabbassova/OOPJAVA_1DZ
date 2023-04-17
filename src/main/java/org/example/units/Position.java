@@ -1,7 +1,6 @@
 package org.example.units;
 
 public class Position {
-    public float distance;
     protected int x;
     protected int y;
 
@@ -23,4 +22,8 @@ public class Position {
        return new int[]{enemy.position.x - this.x, enemy.position.y - this.y};
     }
 
-}
+    protected boolean isLeft(Position opponent){
+        return x < opponent.x;
+    }
+
+   }
